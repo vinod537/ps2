@@ -1,0 +1,224 @@
+<style>
+    .entry-meta.mb-2 {
+        margin-bottom: 16px !important;
+        margin-top: -3px !important;
+        margin-left: 20px;
+    }
+
+    .entry-content.align-self-center a {
+        color: #333;
+    }
+
+    .entry-title {
+        height: 126px !important;
+    }
+
+    .medium-post-style-1,
+    .post-style-1 {
+
+        display: inline-block !important;
+    }
+
+    .sg-post.medium-post-style-1 {
+        width: 100%;
+    }
+
+    .medium-post-style-1 .entry-thumbnail {
+        width: 100%;
+    }
+
+    body {
+        background: #f2f2f2;
+    }
+
+    .sg-main-content.mb-4 .container {
+        width: 63%;
+    }
+
+    .entry-content.align-self-center .entry-title a {
+        font-size: 14px;
+    }
+
+    .sg-widget {
+        display: none;
+    }
+
+    .entry-content.align-self-center .entry-title a {
+        font-size: 17px;
+    }
+
+    .entry-meta li,
+    .entry-meta li a {
+        color: #fff;
+        background: #EF3C0E;
+        border-radius: 36px;
+        padding: 0px 5px 3px 5px;
+        line-height: 21px !important;
+    }
+
+    .sg-post .entry-content {
+        padding: 12px 16px;
+        font-size: 14px;
+        height: 170px;
+    }
+
+    .sg-post.medium-post-style-1 {
+        border-radius: 5px;
+    }
+
+    .entry-meta li,
+    .entry-meta li a {
+        color: #fff !important;
+    }
+
+    .sg-page-content .container {
+        width: 63%;
+    }
+
+    .medium-post-style-1 .entry-thumbnail {
+        width: 100%;
+        height: 185px;
+        border-bottom: 1px solid #22222214;
+    }
+
+    .latest-post-area.row {
+        margin-top: 130px;
+    }
+
+    .sg-page-content {
+        padding-bottom: 52px;
+    }
+
+    .header-bottom {
+        padding: 23px 0;
+        background-color: transparent;
+        padding-bottom: 1px;
+        position: absolute;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .sg-page-content .container {
+        width: 76%;
+    }
+
+    .entry-meta li,
+    .entry-meta li a {
+        color: #444 !important;
+        background: transparent;
+        border-radius: 36px;
+        padding: 0px 5px 3px 5px;
+        line-height: 21px !important;
+    }
+
+    .entry-meta li,
+    .entry-meta li a {
+        color: #444 !important;
+        font-size: 12px;
+        margin-left: -4px;
+    }
+
+    .global-list.d-flex {
+        margin-left: -81px !important;
+    }
+
+    @media screen and (min-width:1100px) and (max-width:1450px) {
+        .global-list.d-flex {
+            margin-left: -57px !important;
+        }
+
+    }
+
+    @media screen and (min-width:320px)and (max-width:767px) {
+        .sg-post.medium-post-style-1 .entry-thumbnail.new_erathumbnail img {
+            width: 100%;
+            height: auto !important;
+        }
+
+        .global-list.d-flex {
+            margin-left: -106px !important;
+        }
+    }
+
+
+    .entry-header.col-md-3 {
+    float: left;
+}
+</style>
+
+
+@extends('site.layouts.app')
+
+@section('content')
+<div class="sg-page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 sg-sticky">
+                <div class="theiaStickySidebar">
+                    <div class="sg-section mb-2">
+                        <div class="section-content search-content">
+
+                            <div class="latest-post-area row">
+                                @if(!blank($feeds))
+                                @foreach($feeds as $post)
+                                <div class="col-md-12">
+                                    <div class=" sg-post medium-post-style-1 col-md-12">
+                                        <div class="entry-header col-md-3">
+                                            <div class="entry-thumbnail new_erathumbnail">
+                                                <a
+                                                    href="@if($post->old_id) {{ route('article.detail', ['id' => $post->old_id, 'slug' => $post->slug ]) }} @else {{ route('article.detail', ['id' => $post->id, 'slug' => $post->slug ]) }} @endif">
+                                                    @if(isFileExist($post->image, $result =
+                                                    @$post->image->original_image))
+                                                    <img src="{{safari_check() ? basePath(@$post->image).'/'.$result : static_asset('default-image/default-358x215.png') }} "
+                                                        data-original=" {{basePath($post->image)}}/{{ $result }} "
+                                                        class="img-fluid" alt="{!! $post->title !!}">
+                                                    @else
+                                                    <img src="{{static_asset('default-image/default-358x215.png') }} "
+                                                        class="img-fluid" alt="{!! $post->title !!}">
+                                                    @endif
+                                                </a>
+                                            </div>
+                                            @if($post->post_type=="video")
+                                            <div class="video-icon large-block">
+                                                <img src="{{static_asset('default-image/video-icon.svg') }} "
+                                                    alt="video-icon">
+                                            </div>
+                                            @elseif($post->post_type=="audio")
+                                            <div class="video-icon large-block">
+                                                <img src="{{static_asset('default-image/audio-icon.svg') }} "
+                                                    alt="audio-icon">
+                                            </div>
+                                            @endif
+                                        </div>
+
+                                        <div class="entry-content align-self-center">
+
+
+                                            <h3 class="entry-title"><a
+                                                    href="@if($post->old_id) {{ route('article.detail', ['id' => $post->old_id, 'slug' => $post->slug ]) }} @else {{ route('article.detail', ['id' => $post->id, 'slug' => $post->slug ]) }} @endif">{{$post->title}}</a>
+                                            </h3>
+                                            <div class="entry-meta mb-2">
+                                                <ul class="global-list">
+                                                    <li><a
+                                                            href="{{route('article.date', date('Y-m-d', strtotime($post->updated_at)))}}">
+                                                            {{ $post->updated_at->format('F j, Y') }}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
+                                @endif
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@endsection

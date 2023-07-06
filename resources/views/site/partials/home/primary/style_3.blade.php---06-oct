@@ -1,0 +1,1144 @@
+<style>
+    @media screen and (min-width:1100px) and (max-width:1500px) {
+.global-list.d-flex.newest {
+	margin-left:47px !important;
+}
+}
+    .sg-main-content.mb-4 {
+	min-height: 400px;
+}
+    .sg-main-content.mb-4 {
+	margin-top: 125px;
+}
+    .l__contents1 .tr-form #news {
+	background: #fff !important;
+}
+   .tr-form #news {
+	background: rgb(233, 227, 254) !important;
+}
+    .global-list.d-flex {
+	margin-left: 47px!important;
+}
+   .carousel-wrap {
+   margin: 90px auto;
+   padding: 0 5%;
+   width: 80%;
+   position: relative;
+   }
+   .banner__s .col-lg-12 {
+   padding: 0px;
+   }
+   .banner__s {
+   margin-top: -31px;
+   }
+   .sg-menu.menu-style-1 {
+   position: relative;
+   z-index: 99;
+   }
+   /* fix blank or flashing items on carousel */
+   .owl-carousel .item {
+   position: relative;
+   z-index: 100; 
+   -webkit-backface-visibility: hidden; 
+   }
+   /* end fix */
+   .owl-nav > div {
+   margin-top: -26px;
+   position: absolute;
+   top: 50%;
+   color: #cdcbcd;
+   }
+   .owl-nav i {
+   font-size: 52px;
+   }
+   .owl-nav .owl-prev {
+   left: -30px;
+   }
+   .owl-nav .owl-next {
+   right: -30px;
+   }
+   .owl-nav .owl-prev {
+   left: 6px!important;
+   }
+   .owl-nav > div {
+   margin-top: -26px;
+   position: absolute;
+   top: 50%;
+   color: #cdcbcd;
+   }
+   .owl-nav .owl-next {
+   right: 8px!important;
+   }
+   .add__banners {
+   margin-bottom: 28px;
+   }
+   .daily__news__pro {
+   background: #fff;
+   }
+   .hdaily_s h3 {
+   font-size: 16px;
+   color: #222;
+   font-weight: 500;
+   }
+   .loop-item-meta_0 {
+   background: #EF3C0E;
+   display: inline-block;
+   color: #fff;
+   padding: 0px 8px 2px 8px;
+   border-radius: 34px;
+   font-size: 12px;
+   margin-top: 7px;
+   margin-bottom: 9px;
+   }
+.hdaily_s {
+	padding: 15px;
+	height: 200px;
+}
+   .hdaily_s p {
+   font-size: 13px;
+   }
+   .all__heading {
+   margin-bottom: 20px;
+   margin-top: 37px;
+   }
+   .all__heading h3 {
+   color: #000;
+   font-size: 20px;
+   }
+   .all__heading::before {
+   content: "";
+   background: #0000004a;
+   height: 1px;
+   width: 88%;
+   display: inline-block;
+   float: right;
+   position: relative;
+   top: 21px;
+   }
+   .sg-home-section {
+   display: none;
+   }
+   .daily__new {
+   margin-bottom: 44px;
+   }
+   .a__bac__l {
+   border-radius: 20px;
+   background-color: rgb(255, 255, 255);
+   box-shadow: 0px 0px 94px 6px rgba(107, 83, 254, 0.1);
+   padding: 80px 0;
+   text-align: center;
+   }
+   .forum__group input {
+   background: rgb(233, 227, 254);
+   border: 1px solid #0000001c;
+   padding: 9px;
+   font-size: 15px;
+   width: 32%;
+   border-radius: 7px;
+   margin-bottom: 17px;
+   }
+   .sub {
+   background: #EF3C0E;
+   border: none;
+   color: #fff;
+   padding: 7px 30px 7px 30px;
+   border-radius: 7px;
+   }
+   .a__bac__l h3 {
+   color: #000;
+   margin-bottom: 16px;
+   }
+   .a__bac__l p {
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   margin-top: 23px;
+   margin-bottom: 23px;
+   }
+   .list__categories__list li {
+   list-style: none;
+   }
+   .list__categories__list {
+   padding: 7px;
+   }
+   .list__categories__li_sting {
+   background: #fff;
+   padding: 6px;
+   border-radius: 5px;
+   }
+   .static_09 h3 {
+   font-size: 14px;
+   color: #000;
+   padding: 10px;
+   margin-bottom: 0px;
+   }
+   .list__categories__list li {
+   display: inline-block;
+   width: 19.7%;
+   padding: 5px;
+   }
+   .sg-main-content.mb-4 {
+   display: none;
+   }
+   .all__heading h3 {
+   color: #000;
+   font-size: 20px;
+   text-transform: uppercase;
+   }
+   .hdaily_s h3 {
+   font-size: 13px;
+   color: #222;
+   font-weight: 400;
+   line-height: 20px;
+   }
+   .categories__list__s {
+   padding-bottom: 36px;
+   padding-top: 16px;
+   }
+   .static_09 h3 {
+   font-size: 14px;
+   color: #000;
+   padding: 10px;
+   margin-bottom: 0px;
+   font-weight: 500;
+   line-height: 19px;
+   }
+   .daily__new {
+   margin-bottom: 44px;
+   margin-top: 62px;
+   }
+   .all__heading {
+   margin-bottom: 33px;
+   margin-top: 37px;
+   text-align: center;
+   }
+   .banner__s {
+   padding: 13px 26px 23px 26px!important;
+   }
+   .img__08 img {
+   width: 100px;
+   height: 100px;
+   border-radius: 72%;
+   margin-left: auto;
+   margin-right: auto;
+   }
+   .img__08 {
+   text-align: center;
+   }
+   .list__categories__li_sting {
+   background: transparent;
+   padding: 6px;
+   border-radius: 5px;
+   }
+   .static_09 {
+   text-align: center;
+   }
+   .static_09 h3 {
+   font-size: 14px;
+   color: #000;
+   padding: 10px;
+   margin-bottom: 0px;
+   font-weight: 500;
+   line-height: 19px;
+   letter-spacing: 1px;
+   }
+   .daily_img .img-fluid {
+   height: 165px;
+   border-radius: 6px 6px 0px 0px;
+   }
+   .list__categories {
+   width: 78%;
+   margin-left: auto;
+   margin-right: auto;
+   }
+   .list__categories__li_sting {
+   margin-bottom: 18px;
+   }
+   .exccinte{
+   text-align: center;
+   }
+   .view__all__09 {
+   text-align: center;
+   }
+   .view__all__09 span {
+   border: none;
+   padding: 5px 26px 7px 26px;
+   border-radius: 36px;
+   background:rgba(34, 54, 102, 0.98);
+   color: #fff;
+   font-size: 13px;
+   }
+   .img__08 img {
+   width: 150px;
+   height: 150px;
+   border-radius: 72%;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 25px;
+   border: 1px solid #0003;
+   background: #fff;
+   }
+   .daily__news__pro {
+   background: #fff;
+   border-radius: 6px;
+   box-shadow: 0px 0px 20px 6px rgba(107, 83, 254, 0.1);
+   }
+   .sg-widget.widget-social {
+   display: none;
+   }
+   .tr-form {
+   width: 50%!important;
+   margin-left: auto;
+   margin-right: auto;
+   }
+   #news {
+   background: rgb(233, 227, 254);
+     border: 1px solid #989a9f70 !important;
+   padding: 9px;
+   font-size: 15px;
+   width: 74%!important;
+   border-radius: 7px;
+   margin-bottom: 17px;
+   }
+   .daily__new .container {
+   max-width: 72%;
+   }
+  .hdaily_s h3 {
+	font-size: 17px;
+	color: #222;
+	font-weight: 400;
+	line-height: 23px;
+	color: #000 !important;
+	height: 124px;
+}
+   .footer-content .sg-socail li a {
+   width: 35px;
+   height: 35px;
+   line-height: 32px;
+   display: block;
+   text-align: center;
+   border-radius: 100%;
+   color: #333;
+   font-size: 15px;
+   border: 1px solid #3d9be140;
+   line-height: 3px !important;
+   }
+   .sg-socail {
+   margin-left: -127px;
+   }
+   .daily_img .img-fluid {
+   height: 227px;
+   border-radius: 6px 6px 0px 0px;
+   width: 100%;
+   }
+   .daily__news__pro {
+   background: #fff;
+   border-radius: 6px;
+   box-shadow: 0px 0px 20px 6px rgba(107, 83, 254, 0.1);
+   margin-bottom: 26px;
+   }
+   .second.circle {
+   position: absolute;
+   margin-left: 47px;
+   }
+   @media screen and (min-width:1100px) and (max-width:1550px){
+   .second.circle {
+   position: absolute;
+   margin-left: 38px;
+   }
+   }
+   .sg-sidebar__theiaStickySidebar .widget-title {
+   display: none;
+   }
+   .sidebar__theiaStickySidebar p {
+   display: none;
+   }
+   .sg-sidebar__theiaStickySidebar p {
+   display: none;
+   }
+   .sg-sidebar__theiaStickySidebar .widget-newsletter {
+   border-radius: 17px;
+   background-color: transparent;
+   box-shadow: none;
+   padding: 13px 0;
+   text-align: center;
+   }
+   .sg-sidebar__theiaStickySidebar .tr-form {
+   width: 70% !important;
+   margin-left: 0px;
+   margin-right: auto;
+   }
+   .banner__sectionss {
+   padding-top: 95px;
+   }
+   .l__contents1 {
+   width: 94%;
+   padding-top: 57px;
+   }
+   .s__09d_0.exccinte .item img {
+   /* width: 68%; */
+   margin-top: 26px;
+   }
+   .all__heading::before {
+   content: "";
+   background: transparent!important;
+   height: 1px;
+   width: 100%;
+   display: inline-block;
+   float: right;
+   position: relative;
+   top: 16px;
+   }
+   .all__heading h3 {
+	color: #073C65;
+	font-size: 72px;
+	text-transform: uppercase;
+}
+   .hdaily_s h3 a {
+   color: #333;
+   font-size: 17px;
+   font-weight: 600;
+   }
+   .loop-item-metad_0 {
+   margin-top: 28px;
+   color: #777;
+   font-size: 14px;
+   }
+   .widget-newsletter.text-center {
+   background:url({{static_asset('site/images/back.jpg') }});
+   }
+   .news__letter .container {
+   max-width: 72%;
+   }
+.widget-newsletter.text-center {
+	text-align: center !important;
+	color: #fff;
+	padding-left: 0px;
+}
+   .widget-newsletter .widget-title {
+   font-weight: 500;
+   color: #fff;
+   font-size: 27px;
+   padding: 8px 0px;
+   margin-bottom: 20px;
+   text-transform: uppercase;
+   background-color: transparent;
+   }
+   .widget-newsletter .tr-form {
+   width: 60%;
+   margin-left: auto;
+   margin-right: auto;
+   }
+   #news {
+   background: transparent!important;
+     border: 1px solid #989a9f70 !important;
+   padding: 11px;
+   font-size: 15px;
+   width: 70%;
+   border-radius: 7px;
+   margin-bottom: 17px;
+   }
+   #news .form-control {
+   height: 57px;
+   border-radius: 4px;
+   padding: 6px 20px;
+   margin-bottom: 30px;
+   border: 1px solid #d8e2e9;
+   }
+   .widget-newsletter .widget-title {
+   font-weight: 600;
+   color: #fff;
+   font-size: 30px;
+   padding: 24px 0px;
+   margin-bottom: 20px;
+   text-transform: uppercase;
+   background-color: transparent;
+   }
+   .widget-newsletter.text-center {
+   background-size: cover;
+   }
+   .banner__sectionss .widget-newsletter.text-center {
+   background: transparent;
+   padding-left: 0px;
+   }
+   .banner__sectionss .sg-sidebar__theiaStickySidebar .tr-form {
+   width: 94% !important;
+   margin-left: 0px;
+   margin-right: auto;
+   }
+   .banner__sectionss #news {
+   background: rgb(233, 227, 254);
+  border: 1px solid #989a9f70 !important;
+   padding: 9px;
+   font-size: 15px;
+   width: 70%;
+   border-radius: 7px;
+   margin-bottom: 17px;
+   }
+   .second.circle {
+   position: absolute;
+   margin-left: 17px;
+   margin-top: -7px;
+   }
+   canvas {
+   width: 159px;
+   }
+   .banner__sectionss {
+   padding-top: 123px;
+   margin-bottom: 53px;
+   }
+   .daily__new {
+   margin-bottom: 44px;
+   margin-top: 88px;
+   }
+   .view__all__09 span {
+   border: none;
+   padding: 14px 38px 13px 38px;
+   border-radius: 10px;
+   background:#073c65;
+   color: #fff;
+   font-size: 13px;
+   text-transform: uppercase;
+   font-size: 19px;
+   margin-top: 42px;
+   display: inline-block;
+   margin-bottom: 22px;
+   cursor: pointer;
+   }
+   .daily__new .col-md-4:nth-child(6){
+   display: none;
+   }	
+   .daily__new .col-md-4:nth-child(5){
+   display: none;
+   }
+   .daily__new .col-md-4:nth-child(4){
+   display: none;
+   }
+   .banner__s.d__059i .widget-newsletter.text-center {
+   background: transparent;
+   padding-left: 0px;
+   }
+   .banner__s.d__059i  .sg-sidebar__theiaStickySidebar .tr-form {
+   width: 96% !important;
+   margin-left: 0px;
+   margin-right: auto;
+   }
+   .banner__s.d__059i {
+   padding-top: 143px !important;
+   padding-bottom: 75px !important;
+   }
+    
+    .cont__yr {
+	padding-left: 16px;
+	margin-right: 14px;
+}
+    
+    .cont__yr li {
+	font-size: 14px;
+	margin-bottom: 4px;
+}
+    .cont__yr {
+	margin-bottom: 32px;
+}
+    .s_dd {
+	margin-top: -34px;
+}
+    
+    .l__contents1 p {
+	font-size: 14px;
+	color: #000;
+}
+    .l__contents1 i {
+	font-size: 13px;
+}
+    
+    .banners2 .img__banners img {
+	width: 85%;
+}
+    
+    .banners2 .l__contents1 {
+	margin-top: 74px;
+}
+    
+    .banners3 .l__contents1 {
+	margin-top: 78px;
+	width: 76%;
+}
+    
+    .banners4 .l__contents1 {
+	margin-top: 27px;
+	width: 77%;
+}
+    
+     .banners4 .img__banners img {
+	width: 117% !important;
+	max-width: 121%;
+	margin-left: -72px;
+}
+    
+    .banners1 .img__banners img {
+	max-width: 114%;
+	width: 123% !important;
+	margin-left: -31px;
+}
+    
+#home-carouselgfgfgfg .btn-success {
+	color: #fff;
+	background-color:#073c65;
+	border-color: #073c65;
+	padding: 8px 27px 9px 27px;
+	float: left;
+	margin-right: 27px;
+	margin-top: 24px;
+	border-radius: 6px;
+}
+    .banner__s.d__059i {
+	padding-top: 128px !important;
+	padding-bottom: 0px !important;
+        height:101vh;
+}
+ .item.banners1 {
+	padding-top: 66px;
+}   
+    .widget-newsletter.text-center {
+	
+	background-size: 100% 100% !important;
+}
+	.mainclasssliderimg ul li {
+	width: 35%;
+	display: inline-block;
+}
+	.mainclasssliderimg ul {
+	padding: 0px;
+	margin-top: 35px;
+}
+	.banners3 img {
+	width: 85%!important;
+}
+	
+.s__09d_0.exccinte .item img {
+	width: 81% !important;
+	margin-top: 26px;
+	border-radius: 11px;
+	box-shadow: 0 0 6px 5px #0000000a;
+}
+  
+    @media screen and (min-width:320px) and (max-width:767px){
+        .global-list.d-flex {
+	margin-left: -79px !important;
+}
+    .loop-item-metad_0 {
+	margin-top: 46px;
+	color: #777;
+	font-size: 14px;
+}
+        .global-list.d-flex {
+	margin-left: 14px !important;
+}
+    }
+      .modal-dialog {
+	max-width: 558px;
+	margin: 10.75rem auto;
+}
+    .modal-header {
+	display: -ms-flexbox;
+	display: block;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding:0px!important;
+	border-bottom: none!important;
+	border-top-left-radius: .3rem;
+	border-top-right-radius: .3rem;
+}
+    .modal-header .close {
+	padding: 1rem 1rem;
+	margin: -1rem -1rem -1rem auto;
+	position: relative;
+	top: -78px !important;
+}
+    .modal-header h3 {
+	color: #000;
+	font-size: 30px;
+	font-family: initial;
+}
+    .modal-header p {
+	font-size: 15px !important;
+	color: #000;
+}
+    .modal-content {
+	padding: 18px;
+}
+    .modal-body {
+	margin-top: -13px;
+}
+    .radio {
+	margin-bottom: 10px;
+        color:#000;
+}
+    .radio input {
+	margin-right: 10px;
+	font-size: 13px!mportant;
+}
+    .checkbox-inline input {
+	margin-right: 10px;
+}
+    .checkbox-inline{
+        color:#000;
+    }
+   .submit_button input {
+	background: #073c65;
+	border: #073c65;
+	color: #fff;
+	border-radius: 10px;
+	padding: 4px 20px;
+	margin-top: 7px;
+}
+    .submit_button {
+	text-align: center;
+}
+    .new_popupbutton {
+/*	display: none !important;*/
+     opacity:0;   
+}
+    @media screen and (min-width:1100px) and (max-width:1450px){
+    .banner__s.d__059i.new_slider .banners3 img {
+	width: 107% !important;
+	max-width: 114%;
+}
+        .loop-item-metad_0 {
+	margin-top: 37px;
+	color: #777;
+	font-size: 14px;
+}
+   .banner__s.d__059i.new_slider .banners2 .img__banners img {
+	width: 107% !important;
+	max-width: 114%;
+	margin-left: -15px;
+}
+       .banner__s.d__059i.new_slider .banners2 .l__contents1 {
+	margin-top: 37px;
+}
+       .banner__s.d__059i.new_slider .banners4 .img__banners img {
+	width: 117% !important;
+	max-width: 121%;
+	margin-left: -72px;
+	margin-top: 59px;
+}
+    }
+</style>
+@php
+$blockPosts = $posts->take(4);
+@endphp
+<!--
+   <section class="banner__s">
+      <div class="row">
+         <div class="col-lg-12">
+            <div id="home-carouselgfgfgfg" class=" ">
+               <div class="owl-carousel">
+                  @foreach($slider1 as $postslider1s)
+                  <div class="item">
+   				   <a href="{{$postslider1s->url}}">
+   					@if(isFileExist(@$postslider1s->adImage, $result = @$postslider1s->adImage->big_image))
+   					<img src="{{basePath($postslider1s->adImage)}}/{{ $result }}" data-src="{{basePath($postslider1s->adImage)}}/{{ $result }}">
+   					@else
+   					<img src="{{static_asset('default-image/default-100x100.png') }} "  >
+   					@endif	
+   				  </a>				
+                  </div>
+                  @endforeach
+               </div>
+            </div>
+         </div>
+         
+      </div>
+   </section>
+   -->
+<section class="banner__s d__059i new_slider">
+    
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-12">
+            <div id="home-carouselgfgfgfg" class=" ">
+               <div class="owl-carousel">
+                   @php 
+                    $i=0;
+                   @endphp
+
+               @foreach($slider1 as $postslider1s)
+               @php 
+                    $i++;
+                   @endphp
+                  <div class="item banners<?php echo $i ?>">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="l__contents1 newhead_new">
+                              <h1 style="color: #ef3a0b;
+                                 font-size: 60px;
+                                 margin-bottom: 50px;">{{$postslider1s->title}} </h1>
+                                  @if($i == 4)
+                                       <div class="s_dd">
+                               <p>PharmaShots Newswire is trusted news distribution solution curated dedicatedly for Life
+Science, Pharmaceutical, Medical Devices and Healthcare companies. We bring
+authentic news, by reaching targeted audience, we cost-effective and less time
+consuming. We are team of experienced life sciences professionals who understand
+your business provide the custom PR writing services</p>
+                                           
+                                           <p>PharmaShots team has more than three years of experience in delivering curated,
+customized news to our readers. Reach us for PharmaShots Newswire and custom PR
+writing service</p>
+                                           <i>#1 Press Release distribution and writing service</i><br/>
+                                           <i>Grab 51% discount today!</i>
+                               </div>
+                                 @elseif($i == 2)
+							     <p>PharmaShots Bespoke service will provide you</p>
+                                 <ul class="cont__yr">
+                               <li>Exclusive analysis of biotech, pharma, and the life sciences,</li>
+                                <li>Inside intelligence on the regulatory organizations (FDA, EMA, NIH),</li>    
+                                <li>Clinical trial analysis and key updates</li> 
+                                <li>Profiles of key players trending, scientific analysis,</li>  
+                                     <li>KOL/ industry expert interviews</li>
+                               </ul>
+							 
+                                 @elseif($i == 3)
+                                 <p>Introducing FREE PharmaShots News App, A one-stop app with the key Life sciences
+news available at one swipe. PharmaShots provides real-time summarized News in 3
+shots from pharma, biotech, MedTech, digital health, and life sciences industry readable
+in 60 seconds.</p>
+                               <i>Download the PharmaShots App</i>
+                                 @elseif($i == 1)
+                                 <p>Real-time summarized News in 3 shots from Pharma, Biotech, Med-Tech, Digital
+Health, and Life Sciences industry readable in 60 seconds.</p>
+							   
+                                 @endif
+
+                                    <!-- {{$postslider1s->content}} -->
+                              <div class="sg-sidebar__theiaStickySidebar">
+                                  @if($i == 1)
+                                       @include('site.partials.right_sidebar_widgets')
+								    @elseif ($i == 3)
+                                        <div class="mainclasssliderimg">
+                                            <ul>
+											<li><a href="https://play.google.com/store/apps/details?id=com.pharmashots"> <img src="{{static_asset('site/images/')}}/gp.png"></a></li>
+											<li><a href="https://apps.apple.com/in/app/pharma-shots/id1526497705\"> <img src="{{static_asset('site/images/')}}/as.png"></a></li>
+                                                <li class="new_popupbutton"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button></li>
+											
+											</ul>
+                                         </div>
+                                    @else
+                                        @if($postslider1s->url1 && $postslider1s->content1)
+                                        <div class="mainclasssliderimg">
+                                             <a href="{{$postslider1s->url1}}" class="btn btn-success ">{{$postslider1s->content1}}</a>
+                                         </div>
+
+                                        @endif
+
+                                        @if($postslider1s->url2 && $postslider1s->content2)
+                                        <div class="mainclasssliderimg">
+                                            <a href="{{$postslider1s->url2}}" class="btn btn-success ">{{$postslider1s->content2}}</a>
+                                         </div>
+                                        @endif
+
+                                   @endif
+                                 
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="img__banners">
+                              <!-- <img src="{{$postslider1s->adImage}} "  > -->
+                              @if(isFileExist(@$postslider1s->adImage, $result = @$postslider1s->adImage->original_image))
+                                <img src="{{basePath($postslider1s->adImage)}}/{{ $result }}" data-src="{{basePath($postslider1s->adImage)}}/{{ $result }}">
+                                @else
+                                <img src="{{static_asset('default-image/default-100x100.png') }} "  >
+                                @endif	
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  @endforeach
+               
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+@if(count($interviewsAds) > 0)
+<div class="add__banners">
+    	 
+   <div class="container">
+     
+      <!--
+         <div class="all__heading">
+            <h3 style="width: 292px;
+               display: inline-block;
+               background: #f2f2f2;
+               position: relative;">Exclusive Interview</h3>
+         </div>
+         -->
+      <div class="s__09d_0 exccinte">
+         @foreach($interviewsAds as $interviews)
+         <?php 
+            // dd($interviews->ad) 
+            ?>
+         <div class="item">
+            @if(isFileExist(@$interviews->ad->adImage, $result = @$interviews->ad->adImage->original_image))
+            <img src="{{basePath($interviews->ad->adImage)}}/{{ $result }}" data-src="{{basePath($interviews->ad->adImage)}}/{{ $result }}">
+            @else
+            <img src="{{static_asset('default-image/default-100x100.png') }} "  >
+            @endif					
+         </div>
+         @endforeach
+          <div class="mbile_viewimg">
+          <img src="{{static_asset('site/images/mobile__new__pre.png')}} "/> </div>
+      </div>
+   </div>
+    </div>
+
+@endif
+<section class="daily__new">
+   <div class="container">
+      <div class="all__heading" style="margin-bottom: 56px;">
+         <h3 style="">Daily News</h3>
+<!--         <p style="padding-bottom: 26px;">Lorem Ipsum is simply dummy text of the printing and typesetting</p>-->
+      </div>
+      <div class="row">
+         @foreach($dailynews as $post)
+         <div class="col-md-4">
+            <div class="daily__news__pro">
+               <div class="daily_img">				  
+                  @if(isFileExist(@$post->image, @$post->image->medium_image))
+                  <img class="img-fluid"
+                     src="{{ safari_check() ? basePath(@$post->image).'/'.$result : static_asset('default-image/default-358x215.png') }} "
+                     data-original="{{basePath(@$post->image)}}/{{ $post->image->medium_image }}"
+                     alt="{!! $post->title !!}">
+                  @else
+                  <img src="{{static_asset('default-image/default-358x215.png') }} "
+                     class="img-fluid" alt="{!! $post->title !!}">
+                  @endif
+               </div>
+               <div class="hdaily_s">
+                  <h3><a href="{{ route('article.detail', ['id' => $post->slug]) }}">{!! \Illuminate\Support\Str::limit($post->title,170) !!}</a></h3>
+                  <div class="loop-item-metad_0">
+                     <!-- Sep 07, 2021 -->
+                     {{ Carbon\Carbon::parse($post->updated_at)->format('M d, Y') }}
+                  </div>
+               </div>
+            </div>
+         </div>
+         @endforeach
+      </div>
+      <p class="view__all__09"><span>Show More</span></p>
+      <!--	  <p class="view__all__09"><span>Show More</span></p>-->
+   </div>
+</section>
+<section class="news__letter form__tr">
+   <div class="container">
+      <div class="sg-sidebar theiaStickySidebar">
+         @include('site.partials.right_sidebar_widgets')
+      </div>
+   </div>
+</section>
+<section class="categories__list__s" style="margin-bottom: 61px;">
+   <div class="container">
+      <div class="all__heading" style="margin-bottom: 66px;">
+         <h3 style="
+            display: inline-block;
+            position: relative; ">Categories</h3>
+<!--         <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>-->
+      </div>
+      <div class="list__categories">
+         <div class="row">
+            <ul class="list__categories__list">
+               @foreach($categories as $category)
+               <li>
+                  <div class="list__categories__li_sting">
+                     <a href="{{ url('category') }}/{{$category->slug}} ">
+                        <div class="img__08 ">
+                           <div class="second circle"></div>
+                           @if(isFileExist(@$category->image, $result = @$category->image->thumbnail))
+                           <img class="" src="{{basePath($category->image)}}/{{ $result }}" data-src="{{basePath($category->image)}}/{{ $result }}">
+                           @else
+                           <img src="{{static_asset('default-100x100.png') }} "  >
+                           @endif		
+                        </div>
+                        <div class="static_09">
+                           <h3>{{$category->category_name}} </h3>
+                        </div>
+                     </a>
+                  </div>
+               </li>
+               @endforeach
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+<div class="container">
+<!--  <h2>Modal Example</h2>-->
+  <!-- Trigger the modal with a button -->
+  
+
+  <!-- Modal -->
+  
+@if (\Session::has('popup'))
+<div class="modal fade show" id="myModal" role="dialog" aria-modal="true" style="padding-right: 17px; display: block;">
+        <div class="modal-dialog">
+        
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3> Newsletter</h3>
+                <p>Subscribe/Update your Newsletter Prefences</p>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            
+            </div>
+            <div class="modal-body">
+            <form action="{{ route('subscribe.newsletter') }}" class="tr-form" method="POST">
+            @csrf
+            <div class="radio">
+            <label><input type="radio" name="optradio" checked>Daily Newsletter</label>
+            </div>
+            <div class="radio">
+            <label><input type="radio" name="optradio">Weekly Newsletter</label>
+                
+            </div>
+                        <label class="checkbox-inline">
+            <input type="checkbox" value="">I agree to the privacy policy and terms.(<a href="#">Link</a>)
+            </label>
+                    <div class="submit_button">
+
+            <input name="email" id="news" type="hidden" class="form-control" placeholder="{{__('email_address')}}" required>
+            <input type="submit" value="Subscribe">
+
+        
+        </div>
+            </form>
+            </div>
+
+        </div>
+        
+        </div>
+    </div>
+@endif
+
+<script>
+  
+  //   $(document).ready(function() {
+  //       $('#myModal').modal('show');
+  //   });
+  </script>
+  
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("headdf");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+<!--
+   <div class="sg-home-section">
+       <div class="container">
+           <div class="row">
+   			
+   
+   			
+   			
+             
+   
+               <div class="col-lg-4">
+                   <div class="sg-breaking-news">
+                       <div class="section-title">
+                           <h1>{{ __('breaking_news') }}</h1>
+                       </div>
+                       <div class="breaking-news-slider">
+                           @foreach($breakingNewss as $post)
+                               <div class="sg-post">
+                                   <div class="entry-content">
+                                       <div class="category">
+                                           <ul class="global-list">
+                                               @isset($post->category->category_name)
+                                                   <li>
+                                                       <a href="{{ url('category',$post->category->slug) }}">{{ $post->category->category_name }}</a>
+                                                   </li>
+                                               @endisset
+                                           </ul>
+                                       </div>
+                                       <h2 class="entry-title">
+                                           <a href="{{ route('article.detail', ['id' => $post->slug]) }}">{!! \Illuminate\Support\Str::limit($post->title,100) !!}</a>
+                                       </h2>
+                                       <div class="entry-meta">
+                                           <ul class="global-list">
+                                               <li>
+                                                   <a href="javascript:void(0)">{{ Carbon\Carbon::parse($post->updated_at)->diffForHumans() }}</a>
+                                               </li>
+                                           </ul>
+                                       </div>
+                                   </div>
+                               </div>
+                           @endforeach
+                       </div>
+                   </div>
+               </div>
+           </div>
+   	
+   
+   		
+           <div class="row">
+               @foreach($blockPosts as $post)
+                   <div class="col-md-3">
+                       <div class="sg-post">
+                           <div class="entry-header">
+                               <div class="entry-thumbnail">
+                                   <a href="{{ route('article.detail', ['id' => $post->slug]) }}">
+                                       @if(isFileExist(@$post->image, @$post->image->medium_image))
+                                           <img class="img-fluid"
+                                                src="{{ safari_check() ? basePath(@$post->image).'/'.$result : static_asset('default-image/default-358x215.png') }} "
+                                                data-original="{{basePath(@$post->image)}}/{{ $post->image->medium_image }}"
+                                                alt="{!! $post->title !!}">
+                                       @else
+                                           <img src="{{static_asset('default-image/default-358x215.png') }} "
+                                                class="img-fluid" alt="{!! $post->title !!}">
+                                       @endif
+                                   </a>
+                               </div>
+                               @if($post->post_type=="video")
+                                   <div class="video-icon block">
+                                       <img src="{{static_asset('default-image/video-icon.svg') }} " alt="video-icon">
+                                   </div>
+                               @elseif($post->post_type=="audio")
+                                   <div class="video-icon block">
+                                       <img src="{{static_asset('default-image/audio-icon.svg') }} " alt="audio-icon">
+                                   </div>
+                               @endif
+                               <div class="category">
+                                   <ul class="global-list">
+                                       @isset($post->category->category_name)
+                                           <li>
+                                               <a href="{{ url('category',$post->category->slug) }}">{{ $post->category->category_name }}</a>
+                                           </li>
+                                       @endisset
+                                   </ul>
+                               </div>
+                           </div>
+                           <div class="entry-content">
+                               <a href="{{ route('article.detail', ['id' => $post->slug]) }}">
+                                   <p>{!! \Illuminate\Support\Str::limit($post->title, 50) !!}</p></a>
+                           </div>
+                       </div>
+                   </div>
+               @endforeach
+           </div>
+       </div>
+   </div>
+   -->

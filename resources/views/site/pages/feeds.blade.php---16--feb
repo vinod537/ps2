@@ -1,0 +1,47 @@
+@extends('site.layouts.app')
+@section('style')
+@endsection
+@section('content')
+
+<style>
+
+section.sg-page-content {
+    margin-top: 123px;
+}
+
+.post {
+    background: #073c65;
+    padding: 7px 32px;
+    color: #fff;
+}
+
+
+a.feed_title {
+    color: #ffff;
+}
+</style>
+    <section class="sg-page-content">
+        <div class="container">
+            <div class="row">
+                <?php
+                $i = 0;
+                if(!empty($feeds)){
+                    foreach ($feeds as $key => $value) { ?>
+                         <div class="post">
+                            <div class="post-head">
+                                <h2><a class="feed_title" href="{{url('/')}}/feed/<?php echo $value->id; ?>"><?php echo $value->name; ?></a></h2>                                
+                            </div>
+                            
+                        </div>
+                   <?php }                 
+                }else {
+                   
+                        echo "<h2>No item found</h2>";
+                    
+                }
+                ?>
+            </div>
+        </div>
+    </section>
+@endsection
+
