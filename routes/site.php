@@ -13,7 +13,7 @@ Route::group(
 		'prefix' => LaravelLocalization::setLocale(),
 		'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
 	],
-
+ 
 	function () use ($page, $article) {
 
 		Route::group(['middleware' => ['XSS']], function () {
