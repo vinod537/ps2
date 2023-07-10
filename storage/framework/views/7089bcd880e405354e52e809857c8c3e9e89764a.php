@@ -5,40 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    @include('site.partials.seo_og')
+    <?php echo $__env->make('site.partials.seo_og', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <title>PharmaShots | Incisive News in 3 Shots</title>
 
-    {{-- CSS --}}
     
-    <link rel="preload" href="{{static_asset('site/css/bootstrap.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link  rel="stylesheet" href="{{static_asset('site/css/bootstrap.min.css') }}"></noscript>
     
-    <link rel="preload" href="{{static_asset('site/css/font-awesome.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link  rel="stylesheet" href="{{static_asset('site/css/font-awesome.min.css') }}"></noscript>
+    <link rel="preload" href="<?php echo e(static_asset('site/css/bootstrap.min.css')); ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link  rel="stylesheet" href="<?php echo e(static_asset('site/css/bootstrap.min.css')); ?>"></noscript>
+    
+    <link rel="preload" href="<?php echo e(static_asset('site/css/font-awesome.min.css')); ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link  rel="stylesheet" href="<?php echo e(static_asset('site/css/font-awesome.min.css')); ?>"></noscript>
 	
-    <link rel="preload" href="{{static_asset('site/css/icon.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="{{static_asset('site/css/owl.carousel.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="<?php echo e(static_asset('site/css/icon.min.css')); ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="<?php echo e(static_asset('site/css/owl.carousel.min.css')); ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	
-    <noscript><link  rel="stylesheet" href="{{static_asset('site/css/icon.min.css') }}"></noscript>
-    <link rel="preload" href="{{static_asset('site/css/magnific-popup.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link  rel="stylesheet" href="{{static_asset('site/css/magnific-popup.min.css') }}"></noscript>
-    <link rel="preload" href="{{static_asset('site/css/animate.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link  rel="stylesheet" href="{{static_asset('site/css/animate.min.css') }}"></noscript>
-    <link rel="preload" href="{{static_asset('site/css/slick.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link  rel="stylesheet" href="{{static_asset('site/css/slick.min.css') }}"></noscript>
-    <link rel="preload" href="{{static_asset('site/css/structure.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link  rel="stylesheet" href="{{static_asset('site/css/structure.min.css') }}"></noscript>
-    <link rel="preload" href="{{static_asset('site/css/main.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link  rel="stylesheet" href="{{static_asset('site/css/main.css') }}"></noscript>
-    @if($language->text_direction == "RTL")
-        <link rel="preload" href="{{static_asset('site/css/rtl.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link  rel="stylesheet" href="{{static_asset('site/css/rtl.min.css') }}"></noscript>
-    @endif
-    <link rel="preload" href="{{static_asset('site/css/custom.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link  rel="stylesheet" href="{{static_asset('site/css/custom.css') }}"></noscript>
-    <link rel="preload" href="{{static_asset('site/css/responsive.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link  rel="stylesheet" href="{{static_asset('site/css/responsive.min.css') }}"></noscript>
+    <noscript><link  rel="stylesheet" href="<?php echo e(static_asset('site/css/icon.min.css')); ?>"></noscript>
+    <link rel="preload" href="<?php echo e(static_asset('site/css/magnific-popup.min.css')); ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link  rel="stylesheet" href="<?php echo e(static_asset('site/css/magnific-popup.min.css')); ?>"></noscript>
+    <link rel="preload" href="<?php echo e(static_asset('site/css/animate.min.css')); ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link  rel="stylesheet" href="<?php echo e(static_asset('site/css/animate.min.css')); ?>"></noscript>
+    <link rel="preload" href="<?php echo e(static_asset('site/css/slick.min.css')); ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link  rel="stylesheet" href="<?php echo e(static_asset('site/css/slick.min.css')); ?>"></noscript>
+    <link rel="preload" href="<?php echo e(static_asset('site/css/structure.min.css')); ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link  rel="stylesheet" href="<?php echo e(static_asset('site/css/structure.min.css')); ?>"></noscript>
+    <link rel="preload" href="<?php echo e(static_asset('site/css/main.css')); ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link  rel="stylesheet" href="<?php echo e(static_asset('site/css/main.css')); ?>"></noscript>
+    <?php if($language->text_direction == "RTL"): ?>
+        <link rel="preload" href="<?php echo e(static_asset('site/css/rtl.min.css')); ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link  rel="stylesheet" href="<?php echo e(static_asset('site/css/rtl.min.css')); ?>"></noscript>
+    <?php endif; ?>
+    <link rel="preload" href="<?php echo e(static_asset('site/css/custom.css')); ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link  rel="stylesheet" href="<?php echo e(static_asset('site/css/custom.css')); ?>"></noscript>
+    <link rel="preload" href="<?php echo e(static_asset('site/css/responsive.min.css')); ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link  rel="stylesheet" href="<?php echo e(static_asset('site/css/responsive.min.css')); ?>"></noscript>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9265584400550148"
     crossorigin="anonymous"></script>
@@ -70,7 +70,7 @@
     margin-left: 0px!important;
 }
 
-    @media screen and (min-width:320px) and (max-width:767px){
+    @media  screen and (min-width:320px) and (max-width:767px){
         
         .entry-title.categoryforsingle.dfh a {
 	
@@ -152,7 +152,7 @@
 }
 	
 	body {
-	background:url({{static_asset('site/images/background__s.jpg') }})!important;
+	background:url(<?php echo e(static_asset('site/images/background__s.jpg')); ?>)!important;
 	background-size: 100% auto !important;
 }
 .all__heading h3 {
@@ -348,7 +348,7 @@ background: transparent!important;
     opacity : 0   ;
   }  
 }
-@keyframes  fadeOut  {
+@keyframes    fadeOut  {
   0% {
     opacity : 1   ;
   }  
@@ -437,7 +437,7 @@ background: transparent!important;
   animation: pulse 10s infinite;
 }
 
-@keyframes pulse {
+@keyframes  pulse {
   0% {
     background-color: #001F3F;
   }
@@ -549,7 +549,7 @@ background: transparent!important;
 	margin-bottom: 22px;
 }
 	
-	@media screen and (min-width:320px) and (max-width:767px){
+	@media  screen and (min-width:320px) and (max-width:767px){
 		
 		.col-md-2asfasf .search-form.d__rtt {
 	/* width: 251px; */
@@ -623,7 +623,7 @@ background: transparent!important;
 }
 	
 	
-	@media screen and (min-width:768px) and (max-width:1250px){
+	@media  screen and (min-width:768px) and (max-width:1250px){
 		
 		.row.containerdg {
     width: 100%;
@@ -651,7 +651,7 @@ background: transparent!important;
 	}
 	
 	
-	@media screen and (min-width:320px) and (max-width:767px) {
+	@media  screen and (min-width:320px) and (max-width:767px) {
 		.paragraph p a {
     color: #0b5dc6;
     word-break: break-word;
@@ -721,43 +721,45 @@ background: transparent!important;
 }
 	}
 	</style>
-    @yield('style')
+    <?php echo $__env->yieldContent('style'); ?>
 
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family={{data_get(activeTheme(), 'options.fonts')}}:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=<?php echo e(data_get(activeTheme(), 'options.fonts')); ?>:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link href="https://fonts.googleapis.com/css2?family={{data_get(activeTheme(), 'options.fonts')}}:wght@400;500;600;700&display=swap"
+        <link href="https://fonts.googleapis.com/css2?family=<?php echo e(data_get(activeTheme(), 'options.fonts')); ?>:wght@400;500;600;700&display=swap"
             rel="stylesheet"></noscript>
 
-    {{-- icons --}}
-    <link rel="icon" href="{{static_asset(settingHelper('favicon')) }}">
+    
+    <link rel="icon" href="<?php echo e(static_asset(settingHelper('favicon'))); ?>">
     <link rel="apple-touch-icon" sizes="144x144"
-          href="{{static_asset('site/images/ico/apple-touch-icon-precomposed.png') }}">
+          href="<?php echo e(static_asset('site/images/ico/apple-touch-icon-precomposed.png')); ?>">
     <link rel="apple-touch-icon" sizes="114x114"
-          href="{{static_asset('site/images/ico/apple-touch-icon-114-precomposed.png') }}">
+          href="<?php echo e(static_asset('site/images/ico/apple-touch-icon-114-precomposed.png')); ?>">
     <link rel="apple-touch-icon" sizes="72x72"
-          href="{{static_asset('site/images/ico/apple-touch-icon-72-precomposed.png') }}">
+          href="<?php echo e(static_asset('site/images/ico/apple-touch-icon-72-precomposed.png')); ?>">
     <link rel="apple-touch-icon" sizes="57x57"
-          href="{{static_asset('site/images/ico/apple-touch-icon-57-precomposed.png') }}">
+          href="<?php echo e(static_asset('site/images/ico/apple-touch-icon-57-precomposed.png')); ?>">
 
-    @if(settingHelper('predefined_header')!=null)
-        {!! base64_decode(settingHelper('predefined_header')) !!}
-    @endif
-    @if(settingHelper('custom_header_style')!=null)
-        {!! base64_decode(settingHelper('custom_header_style')) !!}
-    @endif
+    <?php if(settingHelper('predefined_header')!=null): ?>
+        <?php echo base64_decode(settingHelper('predefined_header')); ?>
 
-    <!--@include('feed::links')-->
+    <?php endif; ?>
+    <?php if(settingHelper('custom_header_style')!=null): ?>
+        <?php echo base64_decode(settingHelper('custom_header_style')); ?>
 
-    {{-- icons --}}
+    <?php endif; ?>
+
+    <!--<?php echo $__env->make('feed::links', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>-->
+
+    
 
 <!-- Template Developed By  -->
-    @stack('style')
+    <?php echo $__env->yieldPushContent('style'); ?>
 
     <style type="text/css">
         :root {
-            --primary-color: {{data_get(activeTheme(), 'options.primary_color')}};
-            --primary-font: {{\Config::get('site.fonts.'.data_get(activeTheme(), 'options.fonts').'')}};
-            --plyr-color-main: {{data_get(activeTheme(), 'options.primary_color')}};
+            --primary-color: <?php echo e(data_get(activeTheme(), 'options.primary_color')); ?>;
+            --primary-font: <?php echo e(\Config::get('site.fonts.'.data_get(activeTheme(), 'options.fonts').'')); ?>;
+            --plyr-color-main: <?php echo e(data_get(activeTheme(), 'options.primary_color')); ?>;
         }
     </style>
 
@@ -769,36 +771,36 @@ background: transparent!important;
     
 
 </head>
-{{-- dark class="sg-dark" --}}
-<body class="{{defaultModeCheck()}}">
 
-@if(settingHelper('preloader_option')==1)
+<body class="<?php echo e(defaultModeCheck()); ?>">
+
+<?php if(settingHelper('preloader_option')==1): ?>
     <div id="preloader">
-        <img src="{{static_asset('site/images/')}}/preloader-2.gif" alt="Image" class="tr-preloader img-fluid">
+        <img src="<?php echo e(static_asset('site/images/')); ?>/preloader-2.gif" alt="Image" class="tr-preloader img-fluid">
     </div>
-@endif
-@include('site.layouts.header')
-{{-- /.sg-header --}}
+<?php endif; ?>
+<?php echo $__env->make('site.layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-@yield('content')
+
+<?php echo $__env->yieldContent('content'); ?>
 
 <div class="scrollToTop" id="display-nothing">
     <a href="#"><i class="fa fa-angle-up"></i></a>
 </div>
-@include('site.layouts.footer')
-{{-- /.footer --}}
+<?php echo $__env->make('site.layouts.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-{{-- JS --}}
 
-<script src="{{static_asset('site/js/jquery.min.js') }}"></script>
-<script src="{{static_asset('site/js/popper.min.js') }}" defer></script>
-<script src="{{static_asset('site/js/bootstrap.min.js') }}" defer></script>
-<script src="{{static_asset('site/js/slick.min.js') }}" defer></script>
-<script src="{{static_asset('site/js/theia-sticky-sidebar.min.js') }}" defer></script>
-<script src="{{static_asset('site/js/magnific-popup.min.js') }}" defer></script>
-<script src="{{static_asset('site/js/carouFredSel.min.js') }}" defer></script>
-<script src="{{static_asset('site/js/owl.carousel.min.js') }}"></script>
-<script src="{{static_asset('site/js/circle-progress.js') }}" defer></script>
+
+
+<script src="<?php echo e(static_asset('site/js/jquery.min.js')); ?>"></script>
+<script src="<?php echo e(static_asset('site/js/popper.min.js')); ?>" defer></script>
+<script src="<?php echo e(static_asset('site/js/bootstrap.min.js')); ?>" defer></script>
+<script src="<?php echo e(static_asset('site/js/slick.min.js')); ?>" defer></script>
+<script src="<?php echo e(static_asset('site/js/theia-sticky-sidebar.min.js')); ?>" defer></script>
+<script src="<?php echo e(static_asset('site/js/magnific-popup.min.js')); ?>" defer></script>
+<script src="<?php echo e(static_asset('site/js/carouFredSel.min.js')); ?>" defer></script>
+<script src="<?php echo e(static_asset('site/js/owl.carousel.min.js')); ?>"></script>
+<script src="<?php echo e(static_asset('site/js/circle-progress.js')); ?>" defer></script>
 	
 		
 	
@@ -1117,93 +1119,96 @@ function closeNav() {
   $(".navbar-nav li.nav-item.sg-dropdown:nth-child(4) ul.sg-dropdown-menu").toggle();
 });
 	</script>
-@stack('script')
-<script src="{{static_asset('site/js/main.min.js') }}" defer></script>
-<script src="{{static_asset('js/custom.js') }}" defer></script>
+<?php echo $__env->yieldPushContent('script'); ?>
+<script src="<?php echo e(static_asset('site/js/main.min.js')); ?>" defer></script>
+<script src="<?php echo e(static_asset('js/custom.js')); ?>" defer></script>
 
-<script async type="text/javascript" src="{{static_asset('site/js') }}/jquery.cookie.min.js"></script>
-<script src="{{static_asset('site/js/lazyload.min.js')}}" defer></script>
-@php
+<script async type="text/javascript" src="<?php echo e(static_asset('site/js')); ?>/jquery.cookie.min.js"></script>
+<script src="<?php echo e(static_asset('site/js/lazyload.min.js')); ?>" defer></script>
+<?php
     if(settingHelper('notification_status') == '1'){
         $onesignal_appid                    =   settingHelper('onesignal_app_id');
         $onesignal_actionmessage            =   settingHelper('onesignal_action_message');
         $onesignal_acceptbuttontext         =   settingHelper('onesignal_accept_button');
         $onesignal_cancelbuttontext         =   settingHelper('onesignal_cancel_button');
     }
-@endphp
-<script src="{{static_asset('site/js') }}/bootstrap-tagsinput.min.js" async></script>
+?>
+<script src="<?php echo e(static_asset('site/js')); ?>/bootstrap-tagsinput.min.js" async></script>
 
-@if(settingHelper('notification_status') == '1')
+<?php if(settingHelper('notification_status') == '1'): ?>
     <!-- oneSignal -->
-    <script src="{{static_asset('site/js') }}/OneSignalSDK.js" async=""></script>
+    <script src="<?php echo e(static_asset('site/js')); ?>/OneSignalSDK.js" async=""></script>
 
     <script>
         var OneSignal = window.OneSignal || [];
         OneSignal.push(["init", {
-            appId: "{{ $onesignal_appid ?? '' }}",
+            appId: "<?php echo e($onesignal_appid ?? ''); ?>",
             subdomainName: 'push',
             autoRegister: false,
             promptOptions: {
                 /* These prompt options values configure both the HTTP prompt and the HTTP popup. */
                 /* actionMessage limited to 90 characters */
-                actionMessage: "{{ $onesignal_actionmessage ?? '' }}",
+                actionMessage: "<?php echo e($onesignal_actionmessage ?? ''); ?>",
                 /* acceptButtonText limited to 15 characters */
-                acceptButtonText: "{{ $onesignal_acceptbuttontext ?? '' }}",
+                acceptButtonText: "<?php echo e($onesignal_acceptbuttontext ?? ''); ?>",
                 /* cancelButtonText limited to 15 characters */
-                cancelButtonText: "{{ $onesignal_cancelbuttontext ?? '' }}"
+                cancelButtonText: "<?php echo e($onesignal_cancelbuttontext ?? ''); ?>"
             }
         }]);
     </script>
 
-    <script src="{{static_asset('site/js/onesignal_notification.js')}}" defer></script>
+    <script src="<?php echo e(static_asset('site/js/onesignal_notification.js')); ?>" defer></script>
 
-@endif
+<?php endif; ?>
 
 
-@if(!blank(\Request::route()))
-    @if(\Request::route()->getName() == "article.detail")
-        @if(settingHelper('adthis_option')==1 and settingHelper('addthis_public_id')!=null)
-            {!! base64_decode(settingHelper('addthis_public_id')) !!}
-        @endif
+<?php if(!blank(\Request::route())): ?>
+    <?php if(\Request::route()->getName() == "article.detail"): ?>
+        <?php if(settingHelper('adthis_option')==1 and settingHelper('addthis_public_id')!=null): ?>
+            <?php echo base64_decode(settingHelper('addthis_public_id')); ?>
 
-        @if(settingHelper('facebook_comment')==1)
+        <?php endif; ?>
+
+        <?php if(settingHelper('facebook_comment')==1): ?>
             <div id="fb-root"></div>
             <script async defer crossorigin="anonymous"
-                    src="https://connect.facebook.net/{{ settingHelper('default_language') }}/sdk.js#xfbml=1&version=v8.0&appId={{ settingHelper('facebook_app_id') }}&autoLogAppEvents=1"
+                    src="https://connect.facebook.net/<?php echo e(settingHelper('default_language')); ?>/sdk.js#xfbml=1&version=v8.0&appId=<?php echo e(settingHelper('facebook_app_id')); ?>&autoLogAppEvents=1"
                     nonce="JOvaLAFF"></script>
-        @endif
-    @endif
-@endif
+        <?php endif; ?>
+    <?php endif; ?>
+<?php endif; ?>
 
-@yield('script')
-@yield('player')
-@yield('audio')
+<?php echo $__env->yieldContent('script'); ?>
+<?php echo $__env->yieldContent('player'); ?>
+<?php echo $__env->yieldContent('audio'); ?>
 
-@isset($post)
-    @if(!blank(\Request::route()))
-        @if(settingHelper('adthis_option')==1 and settingHelper('addthis_public_id')!=null and \Request::route()->getName() == "article.detail")
+<?php if(isset($post)): ?>
+    <?php if(!blank(\Request::route())): ?>
+        <?php if(settingHelper('adthis_option')==1 and settingHelper('addthis_public_id')!=null and \Request::route()->getName() == "article.detail"): ?>
             <script type="text/javascript">
                 (function ($) {
                     "use strict";
                     var addthis_share = {
-                        url: "{{ url()->current() }}",
-                        title: "{{ $post->meta_title }}",
-                        description: "{{ strip_tags($post->meta_description) }}",
-                        media: "{{basePath(@$post->image)}}/{{ @$post->image->og_image }}"
+                        url: "<?php echo e(url()->current()); ?>",
+                        title: "<?php echo e($post->meta_title); ?>",
+                        description: "<?php echo e(strip_tags($post->meta_description)); ?>",
+                        media: "<?php echo e(basePath(@$post->image)); ?>/<?php echo e(@$post->image->og_image); ?>"
                     }
                 })(jQuery);
             </script>
-        @endif
-    @endif
-@endisset
+        <?php endif; ?>
+    <?php endif; ?>
+<?php endif; ?>
 
 
-@if(settingHelper('custom_footer_js')!=null)
-    {!! base64_decode(settingHelper('custom_footer_js')) !!}
-@endif  
+<?php if(settingHelper('custom_footer_js')!=null): ?>
+    <?php echo base64_decode(settingHelper('custom_footer_js')); ?>
 
-<!--<script type="text/javascript" src="{{ static_asset('site/js/webp-support.js') }}"></script>-->
-<script type="text/javascript" src="{{ static_asset('site/js/custom.min.js')}}" type="text/javascript" defer></script>
-@yield('quiz')
+<?php endif; ?>  
+
+<!--<script type="text/javascript" src="<?php echo e(static_asset('site/js/webp-support.js')); ?>"></script>-->
+<script type="text/javascript" src="<?php echo e(static_asset('site/js/custom.min.js')); ?>" type="text/javascript" defer></script>
+<?php echo $__env->yieldContent('quiz'); ?>
 </body>
 </html>
+<?php /**PATH H:\xampp\htdocs\Notion\ps2\resources\views/site/layouts/app.blade.php ENDPATH**/ ?>

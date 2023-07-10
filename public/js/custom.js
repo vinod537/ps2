@@ -1,5 +1,27 @@
 // student section select sction for sibling
 $(document).ready(function () {
+
+    /*=================== JS By Harshad Start ==================*/
+    $('.ps-testimonial-slider').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        dots:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:3
+            }
+        }
+    });
+    /*=================== JS By Harshad End ==================*/
+
+
     $(".select-options li").on("click", function () {
         var url = $('#url').val();
         var formData = {

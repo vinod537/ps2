@@ -1,25 +1,23 @@
-@extends('site.layouts.app')
-
-@section('content')
-    @if(!blank($primarySectionPosts))
-    @include('site.partials.home.primary_section', [
+<?php $__env->startSection('content'); ?>
+    <?php if(!blank($primarySectionPosts)): ?>
+    <?php echo $__env->make('site.partials.home.primary_section', [
         'section' => $primarySection,
         'posts' => $primarySectionPosts,
         'sliderPosts' => $sliderPosts,
-    ])
-    @endif
+    ], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php endif; ?>
 
     <div class="sg-main-content mb-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-7 col-lg-8 sg-sticky">
                     <div class="theiaStickySidebar">
-                        @include('site.partials.home.category_section')
+                        <?php echo $__env->make('site.partials.home.category_section', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     </div>
                 </div>
                 <div class="col-md-5 col-lg-4 sg-sticky">
                     <div class="sg-sidebar theiaStickySidebar">
-                        @include('site.partials.right_sidebar_widgets')
+                        <?php echo $__env->make('site.partials.right_sidebar_widgets', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     </div>
                 </div>
             </div>
@@ -84,7 +82,7 @@ body, html {
 	font-weight: 400;
 	color: #484848;
 	font-size: 16px;	
-	background:url({{static_asset('site/images/background__s.jpg') }})!important;
+	background:url(<?php echo e(static_asset('site/images/background__s.jpg')); ?>)!important;
 	background-size: 100% 100% !important;
 }
 .form-control::placeholder {
@@ -100,7 +98,7 @@ body, html {
     width: 77%;
     margin: auto;
 }
-	@media screen and (min-width:320px) and (max-width:767px) {
+	@media  screen and (min-width:320px) and (max-width:767px) {
 		 
 	
 			.exclusiveintheading {
@@ -167,4 +165,5 @@ section#newsletters {
     color: red;
 }
 </style>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('site.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH H:\xampp\htdocs\Notion\ps2\resources\views/site/pages/home.blade.php ENDPATH**/ ?>
