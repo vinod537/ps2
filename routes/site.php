@@ -35,6 +35,8 @@ Route::group(
 			Route::get('/logout', 'UserController@logout')->name('site.logout');
 			Route::get('activation/{email}/{activationCode}', 'UserController@activation');
 			Route::get('sitemap', 'SitemapController@sitemap')->name('sitemap');
+			Route::get('/sitemap-auto', 'SitemapController@sitemapAuto')->name('sitemap-auto');
+			Route::get('/sitemap-user', 'SitemapController@sitemapUser')->name('sitemap-user');
 			Route::get('/forgot-password', 'UserController@forgotPassword')->name('forget-password');
 			Route::post('/forgot-password', 'UserController@postForgotPassword')->name('do-forget-password');
 			Route::get('reset/{email}/{activationCode}', 'UserController@resetPassword');
