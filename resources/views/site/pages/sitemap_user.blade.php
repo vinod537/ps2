@@ -47,6 +47,34 @@
         .ps-sitmap-table thead tr th {
             border-bottom: 2px solid #727272;
         }
+        .ps-pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            padding-left: 0;
+            margin-top: 40px;
+        }
+        .ps-pagination-item {
+            margin: 0 8px;
+        }
+        
+        .ps-pagination-item span {
+            padding: 5px 10px;
+            background-color: #efefef;
+            border-radius: 3px;
+        }
+        .ps-pagination-link {
+            padding: 5px 10px;
+        }
+        .ps-pagination-link:hover {
+            background-color: #efefef;
+            border-radius: 3px;
+        }
+        .ps-pagination-item a {
+            text-decoration: none;
+            color: #000;
+        }
     </style>
 </head>
 <body>
@@ -188,6 +216,23 @@
                 </tbody>
             </table>
         </div>
+        <ul class="ps-pagination">
+            <li class="ps-pagination-item">
+                <a href="#">Prev</a>
+            </li>
+            <li class="ps-pagination-item">
+                <span>1</span>
+            </li>
+            <li class="ps-pagination-item">
+                <a class="ps-pagination-link" href="#">2</a>
+            </li>
+            <li class="ps-pagination-item">
+                <a class="ps-pagination-link" href="#">3</a>
+            </li>
+            <li class="ps-pagination-item">
+                <a  href="#">Next</a>
+            </li>
+        </ul>
     </section>
 </body>
 </html>
