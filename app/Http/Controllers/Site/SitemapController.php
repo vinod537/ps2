@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Site;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Modules\Page\Entities\Page;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Modules\Post\Entities\Category;
 use Modules\Post\Entities\PressRelease;
 use Modules\Post\Entities\Post;
@@ -74,11 +75,49 @@ class SitemapController extends Controller
     }
 
     public function sitemapUser() {
-        // get 10 categories order by created_at descending
-        $categories = Category::select('slug')->orderBy('created_at', 'desc')->take(10)->get();
+        $pageNumber = request()->query('page');
+        $linksToShow = 100;
+        $limit = 50;
+        if (!$pageNumber) { $pageNumber = 1; }
+        $offset = ($pageNumber - 1) * $limit;
+        
+        // get all the data based on the limit and offset
+        $categories = Category::select('id', 'slug', 'updated_at')->orderBy('updated_at', 'desc')->skip($offset)->take($limit)->get();
+        $press_releases = PressRelease::select('id', 'slug', 'updated_at')->orderBy('updated_at', 'desc')->skip($offset)->take($limit)->get();
+        $pages = Page::select('id', 'slug', 'updated_at')->orderBy('updated_at', 'desc')->skip($offset)->take($limit)->get();
+        $posts = Post::select('id', 'slug', 'updated_at')->orderBy('updated_at', 'desc')->skip($offset)->take($limit)->get();
 
-        // echo '<pre>'; print_r($categories); exit;
-        return view('site.pages.sitemap_user', compact('categories'));
+        // iterate over each array and make the full url
+        foreach ($categories as $category) {
+            $category->url = route('site.category', ['slug' => $category->slug]);
+        }
+        foreach ($press_releases as $press_release) {
+            $press_release->url = route('event.detail', ['id' => $press_release->slug]);
+        }
+        foreach ($pages as $page) {
+            $page->url = url(settingHelper('page_detail_prefix').'/'.$page->slug);
+        }
+        foreach ($posts as $post) {
+            $post->url = route('article.detail', ['id' => $post->id, 'slug' => $post->slug]);
+        }
+
+        // combine all the data into one array
+        $urls = $posts->merge($press_releases)->merge($pages)->merge($categories);
+
+        // get a slice of the data based on the offset and number of items per page
+        // $slice = $urls->slice($offset, $linksToShow);
+
+        // create a new instance of LengthAwarePaginator
+        // using $url instead of slice, because we already used limit and offset
+        $allUrls = new LengthAwarePaginator(
+            $urls,
+            $posts->count() + $press_releases->count() + $pages->count() + $categories->count(),
+            $linksToShow,
+            $pageNumber,
+            ['path' => request()->url(), 'query' => request()->query()]
+        );
+
+        return view('site.pages.sitemap_user', compact('allUrls', 'pageNumber'));
     }
 
     public function sitemapAuto() {

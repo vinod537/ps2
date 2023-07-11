@@ -1,53 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XML Sitemap</title>
+    <title>PharmaShots Sitemap</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-        body{
+        body {
             font-family: 'Poppins', sans-serif;
         }
+
         * {
             margin: 0;
             padding: 0;
-            box-sizing:border-box;
+            box-sizing: border-box;
         }
+
         .ps-sitmap-section {
             padding: 50px;
         }
+
         .ps-sitmap-title {
             margin-bottom: 10px;
             font-size: 32px;
             font-weight: 600;
             color: #6c6c6c;
         }
+
         .ps-sitmap-description {
             margin-bottom: 10px;
         }
+
         .ps-sitmap-table table {
             border-collapse: collapse;
             width: 100%;
             margin-top: 50px;
             font-size: 14px;
         }
+
         .ps-sitmap-table tr * {
             padding: 5px 10px;
             text-align: left;
         }
+
+        .ps-sitmap-table tr td a {
+            color: black
+        }
+
         .ps-sitmap-table thead {
             background-color: #d8d3d3;
         }
+
         .ps-sitmap-table tbody tr:nth-child(odd) {
             background-color: #f5eded;
         }
+
         .ps-sitmap-table thead tr th {
             border-bottom: 2px solid #727272;
         }
-        .ps-pagination {
+
+        nav .pagination {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -55,184 +70,92 @@
             padding-left: 0;
             margin-top: 40px;
         }
-        .ps-pagination-item {
+
+        nav .pagination .page-link {
             margin: 0 8px;
         }
-        
-        .ps-pagination-item span {
-            padding: 5px 10px;
-            background-color: #efefef;
-            border-radius: 3px;
-        }
-        .ps-pagination-link {
-            padding: 5px 10px;
-        }
-        .ps-pagination-link:hover {
-            background-color: #efefef;
-            border-radius: 3px;
-        }
-        .ps-pagination-item a {
+
+        nav .pagination .page-link {
+            color: black;
             text-decoration: none;
-            color: #000;
+            padding: 0.2rem 0.8rem;
+            border: 1px solid #d5d5d5;
+        }
+
+        nav .pagination .page-link .active {
+            padding: 5px 10px;
+            background-color: #efefef;
+            border-radius: 3px;
+        }
+
+        nav .pagination .disabled {
+            cursor: not-allowed;
+        }
+
+        nav .pagination .page-item:first-child .page-link {
+            padding: 0.2rem 0.8rem;
+            background-color: #d7d7d7;
+        }
+
+        nav .pagination .page-item:last-child .page-link {
+            padding: 0.2rem 0.8rem;
+            background-color: #d7d7d7;
         }
     </style>
 </head>
+
 <body>
     <section class="ps-sitmap-section">
-        <h1 class="ps-sitmap-title">XML Site</h1>
-        <p class="ps-sitmap-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic at, dignissimos repellendus sapiente, exercitationem aspernatur </p>
-        <p class="ps-sitmap-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi harum aperiam tempore sunt voluptates? Consectetur possimus earum dolorem architecto debitis commodi quae, rem porro excepturi? Eligendi voluptate esse porro quisquam.</p>
-        <p class="ps-sitmap-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.  </p>
+        <h1 class="ps-sitmap-title">Sitemap</h1>
+        <p class="ps-sitmap-description">Explore PharmaShots: A Comprehensive Sitemap of Our Website</p>
         <div class="ps-sitmap-table">
 
             <table>
                 <thead>
                     <tr>
                         <th>URL</th>
-                        <th>Last Mod.</th>
+                        <th>Last Modified</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
-                    <tr>
-                        <td>http://localhost/Notion/ps2/public/default-image/default-358x215.png</td>
-                        <td>2020-09-08 09:58 +00:00</td>
-                    </tr>
+                    @foreach ($allUrls as $url)
+                        <tr>
+                            <td>
+                                <a target="_blank" href="{{ $url->url }}">{{ $url->url }}</a>
+                            </td>
+                            <td>{{ $url->updated_at }}</td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
-        <ul class="ps-pagination">
-            <li class="ps-pagination-item">
-                <a href="#">Prev</a>
-            </li>
-            <li class="ps-pagination-item">
-                <span>1</span>
-            </li>
-            <li class="ps-pagination-item">
-                <a class="ps-pagination-link" href="#">2</a>
-            </li>
-            <li class="ps-pagination-item">
-                <a class="ps-pagination-link" href="#">3</a>
-            </li>
-            <li class="ps-pagination-item">
-                <a  href="#">Next</a>
-            </li>
-        </ul>
+
+        @php
+            $pagePrev = $allUrls->currentPage() - 1;
+            $pageNext = $allUrls->currentPage() + 1;
+            
+            // url of the previous page with query string parameters
+            $urlPrev = $allUrls->url($pagePrev);
+            $urlNext = $allUrls->url($pageNext);
+        @endphp
+
+        <nav>
+            <ul class="pagination">
+                @if ($allUrls->currentPage() > 1)
+                    <li class="page-item">
+                        <a href="{{ $urlPrev }}" class="page-link">Previous</a>
+                    </li>
+                @endif
+
+                @if ($allUrls->currentPage() < $pageNext)
+                    <li class="page-item">
+                        <a href="{{ $urlNext }}" class="page-link">Next</a>
+                    </li>
+                @endif
+            </ul>
+        </nav>
+
     </section>
 </body>
+
 </html>
