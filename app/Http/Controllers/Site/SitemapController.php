@@ -122,7 +122,7 @@ class SitemapController extends Controller
 
     public function sitemapAuto() {
         // Load the XML file
-        $path = base_path('sitemap-test.xml');
+        $path = base_path('sitemap.xml');
         $xml = simplexml_load_file($path);
 
         // get all categories from the database created_at descending from yesterday only
