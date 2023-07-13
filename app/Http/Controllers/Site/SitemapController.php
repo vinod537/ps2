@@ -123,53 +123,64 @@ class SitemapController extends Controller
     public function sitemapAuto() {
         // Load the XML file
         $path = base_path('sitemap.xml');
-        $xml = simplexml_load_file($path);
+        // if file exists load it, otherwise show error message
+        if (file_exists($path)) {
+            // load the file
+            $xml = simplexml_load_file($path);
 
-        // get all categories from the database created_at descending from yesterday only
-        $categories = Category::select('slug','created_at')->where('created_at', '>=', Carbon::yesterday())->get();
+            // get all categories from the database created_at descending from yesterday only
+            $categories = Category::select('slug','created_at')->where('created_at', '>=', Carbon::yesterday())->get();
 
-        // iterate over all categories and add them to the XML file
-        foreach ($categories as $category) {
-            // append new child
-            $url = $xml->addChild('url');
-            $url->addChild('loc', route('site.category', ['slug' => $category->slug]));
-            $url->addChild('lastmod', date('Y-m-d', strtotime($category->created_at)));
-            $url->addChild('changefreq', 'daily');
-            $url->addChild('priority', '0.9');
+            // iterate over all categories and add them to the XML file
+            foreach ($categories as $category) {
+                // append new child
+                $url = $xml->addChild('url');
+                $url->addChild('loc', route('site.category', ['slug' => $category->slug]));
+                $url->addChild('lastmod', date('Y-m-d', strtotime($category->created_at)));
+                $url->addChild('changefreq', 'daily');
+                $url->addChild('priority', '0.9');
+            }
+
+            $press_releases = PressRelease::select('slug','created_at')->where('created_at', '>=', Carbon::yesterday())->get();
+
+            foreach ($press_releases as $press_release) {
+                $url = $xml->addChild('url');
+                $url->addChild('loc', route('event.detail', ['id' => $press_release->slug]));
+                $url->addChild('lastmod', date('Y-m-d', strtotime($press_release->created_at)));
+                $url->addChild('changefreq', 'daily');
+                $url->addChild('priority', '0.5');
+            }
+
+            $pages = Page::select('slug','created_at')->where('created_at', '>=', Carbon::yesterday())->get();
+            
+            foreach ($pages as $page) {
+                $url = $xml->addChild('url');
+                $url->addChild('loc', url(settingHelper('page_detail_prefix').'/'.$page->slug));
+                $url->addChild('lastmod', date('Y-m-d', strtotime($page->created_at)));
+                $url->addChild('changefreq', 'daily');
+                $url->addChild('priority', '0.9');
+            }
+
+            $posts = Post::select('id', 'slug','created_at')->where('created_at', '>=', Carbon::yesterday())->get();
+
+            foreach ($posts as $post) {
+                $url = $xml->addChild('url');
+                $url->addChild('loc', route('article.detail', ['id' => $post->id, 'slug' => $post->slug]));
+                $url->addChild('lastmod', date('Y-m-d', strtotime($post->created_at)));
+                $url->addChild('changefreq', 'daily');
+                $url->addChild('priority', '0.6');
+            }
+
+            // save the updated XML file
+            // if its saved echo a message
+            if ($xml->asXML($path)) {
+                echo 'XML file updated';
+            } else {
+                echo 'Error while updating XML file';
+            }
+        } else {
+            return 'Error loading XML file';
         }
-
-        $press_releases = PressRelease::select('slug','created_at')->where('created_at', '>=', Carbon::yesterday())->get();
-
-        foreach ($press_releases as $press_release) {
-            $url = $xml->addChild('url');
-            $url->addChild('loc', route('event.detail', ['id' => $press_release->slug]));
-            $url->addChild('lastmod', date('Y-m-d', strtotime($press_release->created_at)));
-            $url->addChild('changefreq', 'daily');
-            $url->addChild('priority', '0.5');
-        }
-
-        $pages = Page::select('slug','created_at')->where('created_at', '>=', Carbon::yesterday())->get();
-        
-        foreach ($pages as $page) {
-            $url = $xml->addChild('url');
-            $url->addChild('loc', url(settingHelper('page_detail_prefix').'/'.$page->slug));
-            $url->addChild('lastmod', date('Y-m-d', strtotime($page->created_at)));
-            $url->addChild('changefreq', 'daily');
-            $url->addChild('priority', '0.9');
-        }
-
-        $posts = Post::select('id', 'slug','created_at')->where('created_at', '>=', Carbon::yesterday())->get();
-
-        foreach ($posts as $post) {
-            $url = $xml->addChild('url');
-            $url->addChild('loc', route('article.detail', ['id' => $post->id, 'slug' => $post->slug]));
-            $url->addChild('lastmod', date('Y-m-d', strtotime($post->created_at)));
-            $url->addChild('changefreq', 'daily');
-            $url->addChild('priority', '0.6');
-        }
-
-        // save the updated XML file
-        $xml->asXML($path);
     }
 
 }
