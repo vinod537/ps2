@@ -128,8 +128,12 @@ class SitemapController extends Controller
             // load the file
             $xml = simplexml_load_file($path);
 
+            // do it from 8 july instead of yesterday because we're running it for the first time
+            // $dateToPickPagesFrom = Carbon::parse('2023-07-08'); // will change this
+            $dateToPickPagesFrom = Carbon::yesterday();
+
             // get all categories from the database created_at descending from yesterday only
-            $categories = Category::select('slug','created_at')->where('created_at', '>=', Carbon::yesterday())->get();
+            $categories = Category::select('slug','created_at')->where('created_at', '>=', $dateToPickPagesFrom)->get();
 
             // iterate over all categories and add them to the XML file
             foreach ($categories as $category) {
@@ -141,7 +145,7 @@ class SitemapController extends Controller
                 $url->addChild('priority', '0.9');
             }
 
-            $press_releases = PressRelease::select('slug','created_at')->where('created_at', '>=', Carbon::yesterday())->get();
+            $press_releases = PressRelease::select('slug','created_at')->where('created_at', '>=', $dateToPickPagesFrom)->get();
 
             foreach ($press_releases as $press_release) {
                 $url = $xml->addChild('url');
@@ -151,7 +155,7 @@ class SitemapController extends Controller
                 $url->addChild('priority', '0.5');
             }
 
-            $pages = Page::select('slug','created_at')->where('created_at', '>=', Carbon::yesterday())->get();
+            $pages = Page::select('slug','created_at')->where('created_at', '>=', $dateToPickPagesFrom)->get();
             
             foreach ($pages as $page) {
                 $url = $xml->addChild('url');
@@ -161,7 +165,7 @@ class SitemapController extends Controller
                 $url->addChild('priority', '0.9');
             }
 
-            $posts = Post::select('id', 'slug','created_at')->where('created_at', '>=', Carbon::yesterday())->get();
+            $posts = Post::select('id', 'slug','created_at')->where('created_at', '>=', $dateToPickPagesFrom)->get();
 
             foreach ($posts as $post) {
                 $url = $xml->addChild('url');
