@@ -1028,38 +1028,41 @@ class ArticleController extends Controller
 
 			
 			$Serah = $request->get('search');
+			// check if its a category and get its id
+			$cat = Category::select('id')->where('slug', $Serah)->first();
+			
 			if (isset($Serah)) {
 				$ps = '1';
-				$posts = Post::where(DB::raw('LOWER(title)'), 'like', '%' . strtolower($request->get('search')) . '%')->where('visibility', 1)->where('status', 1)
-                ->when(Sentinel::check() == false, function ($query) {
-                    $query->where('auth_required', 0);
-                })
-				// ->where('category_id', 'not like', "%24%")
-				// ->where('category_id', 'not like', "%21%")
-				// ->where('category_id', 'not like', "%27%")
-				// ->where('category_id', 'not like', "%28%")
-				// ->where('category_id', 'not like', "%29%")
-				// ->where('category_id', 'not like', "%31%")
-				// ->where('category_id', 'not like', "%22%")
 
-				->orderBy('updated_at', 'desc')
-                ->limit(6)->get();
-
-            $totalPostCount = Post::where(DB::raw('LOWER(title)'), 'like', '%' . strtolower($request->get('search')) . '%')
-				->where('visibility', 1)->where('status', 1)
-				// ->where('category_id', 'not like', "%24%")
-				// ->where('category_id', 'not like', "%21%")
-				// ->where('category_id', 'not like', "%27%")
-				// ->where('category_id', 'not like', "%28%")
-				// ->where('category_id', 'not like', "%29%")
-				// ->where('category_id', 'not like', "%31%")
-				// ->where('category_id', 'not like', "%22%")
-
-                ->when(Sentinel::check() == false, function ($query) {
-                    $query->where('auth_required', 0);
-                })
-				//  ->whereNotIn('category_id','!=', '24')
-				->count();
+				if (gettype($cat) === "object") {
+					$posts = Post::where('category_id', 'like', "%$cat->id%")
+					->when(Sentinel::check() == false, function ($query) {
+						$query->where('auth_required', 0);
+					})
+					->orderBy('updated_at', 'desc')
+					->limit(6)->get();
+	
+					$totalPostCount = Post::where('category_id', 'like', "%$cat->id%")
+					->where('visibility', 1)->where('status', 1)
+					->when(Sentinel::check() == false, function ($query) {
+						$query->where('auth_required', 0);
+					})
+					->count();
+				} else {
+					$posts = Post::where(DB::raw('LOWER(title)'), 'like', '%' . strtolower($request->get('search')) . '%')->where('visibility', 1)->where('status', 1)
+					->when(Sentinel::check() == false, function ($query) {
+						$query->where('auth_required', 0);
+					})
+					->orderBy('updated_at', 'desc')
+					->limit(6)->get();
+	
+					$totalPostCount = Post::where(DB::raw('LOWER(title)'), 'like', '%' . strtolower($request->get('search')) . '%')
+					->where('visibility', 1)->where('status', 1)
+					->when(Sentinel::check() == false, function ($query) {
+						$query->where('auth_required', 0);
+					})
+					->count();
+				}
 			}else{
 				
 				$ps = '0';
