@@ -23,6 +23,8 @@ use Modules\Post\Entities\PressRelease;
 use Modules\Setting\Entities\Setting;
 use File;
 use Image;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Session;
 use LaravelLocalization;
 use App\VisitorTracker;
 use App\Reaction;
@@ -41,7 +43,20 @@ class ArticleController extends Controller
 			->where('slug', $slug)->first();
 
 		if (!blank($post)) {
-			$post->total_hit = $post->total_hit+1;
+			// Get the current IP address
+			$current_ip = $_SERVER['REMOTE_ADDR'];
+
+			// Get the IP address stored in the session, or set it to an empty string if it's not set
+			$previous_ip = Session::get('previous_ip', '');
+
+			// Compare the current IP address with the previous IP address
+			if ($current_ip !== $previous_ip) {
+				// If the IP addresses are different, increase the total_hit count
+				$post->total_hit = $post->total_hit + 1;
+				
+				// Update the session variable with the new IP address
+				Session::put('previous_ip', $current_ip);
+			}
 			$post->timestamps = false;
 
 			$post->save();
@@ -2026,4 +2041,20 @@ class ArticleController extends Controller
 
     }
 
+	public function updateArchive() {
+		$posts = Post::select('id', 'visibility', 'status', 'is_archived')->where('is_archived', 0)->where('created_at', '<', Carbon::now()->subYears(3))->get();
+
+		if ($posts->count() > 0) {
+			foreach ($posts as $post) {
+				$post->visibility = 0;
+				$post->status = 0;
+				$post->is_archived = 1;
+				$post->save();
+			}
+
+			echo 'Archive updated successfully';
+		} else {
+			echo 'No records found';
+		}
+	}
 }

@@ -137,7 +137,7 @@ Route::group(
 		Route::get('{id}/{slug}', 'ArticleController@show')->name('article.detail')->where('id', '[0-9]+');
 		Route::get('preview/{id}/{slug}', 'ArticleController@Previewshow')->name('article.detail.preview')->where('id', '[0-9]+');
 
-
+		Route::get('/update-archive', 'ArticleController@updateArchive')->name('update-archive');
 
 		// Apis
 
