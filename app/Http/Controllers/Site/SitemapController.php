@@ -80,7 +80,13 @@ class SitemapController extends Controller
         $limit = 50;
         if (!$pageNumber) { $pageNumber = 1; }
         $offset = ($pageNumber - 1) * $limit;
-        
+
+        // total count of all the data
+        $count_total_links = Category::count();
+        $count_total_links += PressRelease::count();
+        $count_total_links += Page::count();
+        $count_total_links += Post::count();
+
         // get all the data based on the limit and offset
         $categories = Category::select('id', 'slug', 'updated_at')->orderBy('updated_at', 'desc')->skip($offset)->take($limit)->get();
         $press_releases = PressRelease::select('id', 'slug', 'updated_at')->orderBy('updated_at', 'desc')->skip($offset)->take($limit)->get();
@@ -117,7 +123,7 @@ class SitemapController extends Controller
             ['path' => request()->url(), 'query' => request()->query()]
         );
 
-        return view('site.pages.sitemap_user', compact('allUrls', 'pageNumber'));
+        return view('site.pages.sitemap_user', compact('allUrls', 'pageNumber', 'count_total_links'));
     }
 
     public function sitemapAuto() {

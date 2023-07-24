@@ -31,6 +31,7 @@ use App\Reaction;
 use Sentinel;
 use Modules\Ads\Entities\Ad;
 use Modules\Ads\Entities\AdLocation;
+use Illuminate\Support\Facades\Cookie;
 
 class ArticleController extends Controller
 {
@@ -43,19 +44,9 @@ class ArticleController extends Controller
 			->where('slug', $slug)->first();
 
 		if (!blank($post)) {
-			// Get the current IP address
-			$current_ip = $_SERVER['REMOTE_ADDR'];
-
-			// Get the IP address stored in the session, or set it to an empty string if it's not set
-			$previous_ip = Session::get('previous_ip', '');
-
-			// Compare the current IP address with the previous IP address
-			if ($current_ip !== $previous_ip) {
-				// If the IP addresses are different, increase the total_hit count
+			if (Cookie::get('post_' . $id) != '1') {
 				$post->total_hit = $post->total_hit + 1;
-				
-				// Update the session variable with the new IP address
-				Session::put('previous_ip', $current_ip);
+				Cookie::queue(Cookie::make('post_' . $id, '1', 30));
 			}
 			$post->timestamps = false;
 

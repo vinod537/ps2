@@ -101,13 +101,21 @@
             padding: 0.2rem 0.8rem;
             background-color: #d7d7d7;
         }
+
+        .ps-sub-title {
+            display: flex;
+            justify-content: space-between;
+        }
     </style>
 </head>
 
 <body>
     <section class="ps-sitmap-section">
         <h1 class="ps-sitmap-title">Sitemap</h1>
-        <p class="ps-sitmap-description">Explore PharmaShots: A Comprehensive Sitemap of Our Website</p>
+        <div class="ps-sub-title">
+            <span class="ps-sitmap-description">Explore PharmaShots: A Comprehensive Sitemap of Our Website</span>
+            <span>Total Number of URLs : <strong>{{ $count_total_links }}</strong></span>
+        </div>
         <div class="ps-sitmap-table">
 
             <table>
