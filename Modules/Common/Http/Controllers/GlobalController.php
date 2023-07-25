@@ -50,6 +50,23 @@ class GlobalController extends Controller
             $query = User::find($id);
 
             if ($query->count() > 0) :
+                // currently we have user_id field in posts table
+                // from now on, when we delete a user, we'll check if the user_type is admin
+                // if its admin then we'll update the user_id field to 1, in that particular user's posts
+                // if its not admin then we don't have to anything about posts
+    
+                // check if the user is admin
+                if ($query->user_type == 'admin') :
+                    // get all posts of that user
+                    $posts = Post::where('user_id', $id)->get();
+                    if ($posts->count() > 0) :
+                        foreach ($posts as $post) :
+                            $post->user_id = 1;
+                            $post->save();
+                        endforeach;
+                    endif;
+                endif;
+                
                 $query->delete();
                 $data['status']     = "success";
                 $data['message']    = __('successfully_deleted');
