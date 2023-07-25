@@ -31,7 +31,6 @@ use App\Reaction;
 use Sentinel;
 use Modules\Ads\Entities\Ad;
 use Modules\Ads\Entities\AdLocation;
-use Illuminate\Support\Facades\Cookie;
 
 class ArticleController extends Controller
 {
@@ -44,10 +43,25 @@ class ArticleController extends Controller
 			->where('slug', $slug)->first();
 
 		if (!blank($post)) {
-			if (Cookie::get('post_' . $id) != '1') {
+			// if the post's created_at is greater than 2023-07-24 00:00:00, then we'll enter the post_id and ip_addr in the ip_data table
+			// for these posts, the total_hit count will the count of the number of rows in ip_data of this particular post_id
+
+			// check if the post's created_at is greater than 2023-07-24 00:00:00
+			if ($post->created_at > '2023-07-24 00:00:00') {
+				$ip_data = DB::table('ip_data')->where('post_id', $post->id)->where('ip_addr', request()->ip())->first();
+
+				if (empty($ip_data)) {
+					DB::table('ip_data')->insert([
+						'post_id' => $post->id,
+						'ip_addr' => request()->ip(),
+					]);
+				}
+				$post->total_hit = DB::table('ip_data')->where('post_id', $post->id)->count();
+			} else {
+				// normal logic for posts before 2023-07-24 00:00:00
 				$post->total_hit = $post->total_hit + 1;
-				Cookie::queue(Cookie::make('post_' . $id, '1', 30));
 			}
+
 			$post->timestamps = false;
 
 			$post->save();
@@ -640,8 +654,24 @@ class ArticleController extends Controller
 		$post = PressRelease::where('slug', $id)->first();
 
 		if (!blank($post)) {
+			// if the post's created_at is greater than 2023-07-24 00:00:00, then we'll enter the post_id and ip_addr in the ip_data table
+			// for these posts, the total_hit count will the count of the number of rows in ip_data of this particular post_id
 
-			$post->total_hit = $post->total_hit+1;
+			// check if the post's created_at is greater than 2023-07-24 00:00:00
+			if ($post->created_at > '2023-07-24 00:00:00') {
+				$ip_data = DB::table('ip_data')->where('post_id', $post->id)->where('ip_addr', request()->ip())->first();
+
+				if (empty($ip_data)) {
+					DB::table('ip_data')->insert([
+						'post_id' => $post->id,
+						'ip_addr' => request()->ip(),
+					]);
+				}
+				$post->total_hit = DB::table('ip_data')->where('post_id', $post->id)->count();
+			} else {
+				// normal logic for posts before 2023-07-24 00:00:00
+				$post->total_hit = $post->total_hit + 1;
+			}
 			$post->timestamps = false;
 
 			$post->save();

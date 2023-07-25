@@ -69,7 +69,7 @@ class SitemapController extends Controller
                 ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
                 ->setPriority(0.9));
         endforeach;
-                $sitemap->writeToFile('sitemap.xml');
+                $sitemap->writeToFile('sitemap_index.xml');
 
         return redirect()->back()->with('success', __('successfully_generated'));
     }
@@ -128,7 +128,7 @@ class SitemapController extends Controller
 
     public function sitemapAuto() {
         // Load the XML file
-        $path = base_path('sitemap.xml');
+        $path = base_path('sitemap_index.xml');
         // if file exists load it, otherwise show error message
         if (file_exists($path)) {
             // load the file
