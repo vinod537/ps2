@@ -66,6 +66,13 @@ class UserController extends Controller
 
             $image = $request->file('profile_image');
 
+            if ($request->user_role == 'superadmin' || $request->user_role == 'editor' || $request->user_role == 'admin') {
+                $user_type = 'admin';
+            } else {
+                $user_type = 'user';
+            }
+            $user->user_type = $user_type;
+
             if(isset($image)):
 //            make unique name for image
                 $currentDate = Carbon::now()->toDateString();
@@ -89,18 +96,9 @@ class UserController extends Controller
                 Image::make($image)->fit(260, 200)->save($profileImgUrl);
 
                 $user->profile_image    = str_replace("public/","",$profileImgUrl);
-
-                if ($request->user_role == 'superadmin' || $request->user_role == 'editor' || $request->user_role == 'admin') {
-                    $user_type = 'admin';
-                }else{
-                    $user_type = 'user';
-                }
-                
-                $user->user_type         = $user_type;
-                
-                $user->save();
-
             endif;
+            
+            $user->save();
 
             $role       = Sentinel::findRoleBySlug($request->user_role);
 
