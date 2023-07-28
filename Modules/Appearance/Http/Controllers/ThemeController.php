@@ -169,9 +169,19 @@ class ThemeController extends Controller
 
             $video_id = $this->get_youtube_video_id($url);
 
-            $hash = json_decode(file_get_contents("https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id=".$video_id."&key=".$youtube_api_key.""));
+            // file_get_contents isn't working. So, I used curl instead.
+            // $hash = json_decode(file_get_contents("https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id=" . $video_id . "&key=" . $youtube_api_key));
 
- 
+            $url = 'https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id=' . $video_id . '&key=' . $youtube_api_key;
+
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            $response = curl_exec($ch);
+            curl_close($ch);
+            
+            $hash = json_decode($response);
 
             if (!$hash) {
 
